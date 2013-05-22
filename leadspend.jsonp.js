@@ -14,7 +14,7 @@ if (typeof LeadSpend == 'undefined') {
 		this.validate = function(emailAddress, timeoutInSeconds, callback) {
 			jQuery.jsonp({
 				emailAddress: emailAddress,
-				url: "https://api.leadspend.com/v2/validity/" + encodeURIComponent(emailAddress) + "?timeout=" + timeoutInSeconds,
+				url: "https://primary.api.leadspend.com/v2/validity/" + encodeURIComponent(emailAddress) + "?timeout=" + timeoutInSeconds,
 				callbackParameter: "callback",
 				timeout: timeoutInSeconds * 1000,
 				success: function(data, status) { callback(data); },
